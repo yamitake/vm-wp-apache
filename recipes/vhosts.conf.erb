@@ -1,0 +1,9 @@
+
+<VirtualHost *:80>
+DocumentRoot /var/www/projects/plane-wordpress
+ServerName planewp.local
+</VirtualHost>
+<Directory "/var/www/projects/plane-wordpress">
+order deny,allow
+allow from ALL
+</Directory>
