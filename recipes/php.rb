@@ -8,3 +8,7 @@ package 'php-mysqlnd php-gd php-intl php-mbstring'
 execute 'php.ini backup' do
     command 'cp /etc/php.ini /etc/php.ini.org'
 end
+
+template "/etc/php.ini" do
+  source "php.ini.erb"
+end

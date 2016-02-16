@@ -26,6 +26,11 @@ $ vagrant plugin install vagrant-itamae
 $ vagrant up
 ```
 
+## provision
+```
+$ vagrant provision
+```
+
 ## reload
 ```
 $ vagrant reload
@@ -47,10 +52,17 @@ $ vagrant destroy
 * Non configured
 
 # command memo
-$ sudo apachctrl restart
-$ tail -f /var/log/httpd/access_log
+## サーバ再起動
+```
+$sudo apachctrl restart
 
+## ログを見る
+```
+$tail -f /var/log/httpd/access_log
 
+```
+
+# サーバにする場合
 ```
 $ bundle exec install --path vendor/bundle
 $ bundle exec itamae ssh -h hostname -j nodes/node.json recipes/init.rb
